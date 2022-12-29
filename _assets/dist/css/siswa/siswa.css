@@ -1,0 +1,55 @@
+.styled-table thead tr {
+    color: var(--first-color);
+    text-align: left;
+}
+
+.styled-table th:first-child {
+    width: 5%;
+}
+
+.styled-table th:nth-child(2) {
+    width: 20%;
+}
+
+.styled-table th:nth-child(3) {
+    width: 15%;
+}
+
+.styled-table th:nth-child(4) {
+    width: 15%;
+}
+
+.styled-table th:nth-child(5) {
+    width: 25%;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.flex {
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.flex h2 {
+    margin-bottom: 0;
+}
+
+.btn-sm {
+    width: 20%;
+    padding: 2px 10px !important;
+    font-size: 10px !important;
+}
+
+div #kelas {
+    width: 7%;
+    margin: 0 0 2rem 0.5rem;
+    display: inline-block;
+}
+
+div>label>h4 {
+    display: inline-block;
+}

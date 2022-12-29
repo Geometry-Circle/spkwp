@@ -1,0 +1,82 @@
+.content {
+    margin: 4rem 0 0 0;
+    padding: 2rem;
+}
+
+/* CSS untuk data.php */
+#example1_length {
+    margin: 0 0 1rem 0;
+}
+
+#example1 {
+    margin: 0 0 1rem 0;
+}
+
+#example1 th:nth-child(2) {
+    width: 25%;
+}
+
+#example1 .aksi {
+    padding: 0;
+}
+
+/* end */
+
+
+h1,
+h2,
+h3 {
+    margin: 0 !important;
+}
+
+.container {
+    width: 40%;
+    margin: 0 auto;
+}
+
+/* Card style */
+.card {
+    padding: 2rem 3rem;
+    background-color: beige;
+    border-radius: 5px;
+}
+
+/* Input style */
+.input-container {
+    margin: 0;
+    position: relative;
+}
+
+.input-group {
+    margin: 1rem 0;
+}
+
+.form-input:focus {
+    background-color: #fff;
+    border-color: #3b49df;
+    box-shadow: 1px 1px 0 #3b49df;
+}
+
+.label-input {
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.buttons2 {
+    margin: 2rem 0 0 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+}
+
+#example1_filter label input {
+    margin-top: 35px;
+}
+
+.flex {
+    margin: 0 0 1rem 0;
+    display: flex;
+    gap: 1rem;
+}

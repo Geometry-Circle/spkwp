@@ -1,0 +1,17 @@
+.gender label {
+    margin-right: 2rem;
+}
+
+.form-alamat {
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+    border: 1px solid rgb(181, 189, 196);
+    font-size: 16px;
+}
+
+div #kelas {
+    width: 25% !important;
+    margin: 0 0 2rem 0.5rem;
+    display: inline-block;
+}

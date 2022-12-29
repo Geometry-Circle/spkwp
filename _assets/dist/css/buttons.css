@@ -1,0 +1,82 @@
+.buttons {
+    margin: 1rem 0;
+    display: flex;
+}
+
+.buttons2 button {
+    width: 25%;
+}
+
+.btn-a {
+    width: 25%;
+    margin-right: 5px;
+    color: var(--body-color);
+    font-size: 14px;
+    padding: 2px 10px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-sm {
+    width: 20%;
+    padding: 2px 10px !important;
+    font-size: 10px !important;
+}
+
+.btn2 {
+    width: 7%;
+    color: var(--body-color);
+    font-size: 14px;
+    padding: 2px 10px;
+    border-radius: 50px;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.btn-tambah {
+    padding: 6px 10px;
+    background-color: #0d6efd;
+}
+
+.btn-tambah:hover {
+    color: white;
+    background-color: #075bda;
+}
+
+.btn-edit {
+    margin-left: 15px;
+    padding: 6px 10px;
+    background-color: #fdb10d;
+}
+
+.btn-kembali {
+    margin-left: 15px;
+    padding: 6px 10px;
+    background-color: #adadad;
+}
+
+.btn-kembali:hover {
+    color: white;
+    background-color: #919191;
+}
+
+.btn-edit:hover {
+    color: white;
+    background-color: #f3a704;
+}
+
+.btn-hapus {
+    margin-left: 15px;
+    padding: 6px 10px;
+    background-color: #dc3545;
+}
+
+.btn-hapus:hover {
+    color: white;
+    background-color: #c53140;
+}
