@@ -24,7 +24,7 @@ $kelas = 3;
   <section class="content">
     <main>
 
-      <div>
+      <!-- <div>
         <label for="kelas">
           <h4>Lihat data alternatif: </h4>
         </label>
@@ -36,7 +36,7 @@ $kelas = 3;
           <option value="<?= base_url('alternatif/alternatif-5.php'); ?>">Kelas 5</option>
           <option value="<?= base_url('alternatif/alternatif-6.php'); ?>">Kelas 6</option>
         </select>
-      </div>
+      </div> -->
 
       <div class="flex">
         <h2>Data Alternatif Siswa Kelas <?= $kelas; ?> </h2>

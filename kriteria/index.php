@@ -40,7 +40,9 @@ $no = 1;
               <th>Nama Kriteria</th>
               <th>Nilai (%)</th>
               <th>Bobot W</th>
+              <?php if($_SESSION['level'] == 'admin'): ?>
               <th>Aksi</th>
+              <?php endif; ?>
             </tr>
           </thead>
           <tbody>
@@ -52,12 +54,16 @@ $no = 1;
                 <td>
                   <?= number_format($value['nilai'] / $totalNilai, 1); ?>
                 </td>
+
+              <?php if($_SESSION['level'] == 'admin'): ?>
                 <td class="aksi">
                   <a href="edit-kriteria.php?id=<?= $value['id'] ?>" class="btn-a btn-sm btn-edit">
                     <i class='bx bxs-edit bx-xs'></i>
                     Edit
                   </a>
                 </td>
+              <?php endif; ?>
+
               </tr>
             <?php $no++;
               $bobotW = number_format($value['nilai'] / $totalNilai, 3);

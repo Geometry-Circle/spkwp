@@ -22,6 +22,8 @@ $sql_a = mysqli_query($con, $query) or die(mysqli_error($con));
 <body>
     <section class="content">
         <main>
+        <!-- Jika usernya admin maka menu ini akan dibuka -->
+        <?php if($_SESSION['level'] == 'admin'): ?>
             <div>
                 <label for="kelas">
                     <h4>Lihat data siswa kelas : </h4>
@@ -35,6 +37,7 @@ $sql_a = mysqli_query($con, $query) or die(mysqli_error($con));
                     <option value="kelas-6/index.php">Kelas 6</option>
                 </select>
             </div>
+            <?php endif; ?>
             <div class="flex">
                 <h2>Data Siswa Kelas 2</h2>
 

@@ -55,12 +55,25 @@ while ($row = mysqli_fetch_array($kriteria)) {
                             <input type="text" name="nama" class="form-input" value="<?= $siswa[0]['nama']; ?>" disabled>
                         </div>
 
-                        <?php foreach ($dataKriteria as $key => $value) : ?>
+                        <?php foreach ($dataKriteria as $key => $value) :?>
+
                             <!-- Input Kriteria -->
+                            <?php if($value['id'] != 1): ?>
                             <div class="input-group">
+                                <label for="<?= $value['nama']; ?>" class="label-input"><?= $value['nama']; ?></label>
+                                <input type="text" name="<?= $value['nama']; ?>" id="<?= $value['nama']; ?>" class="form-input" placeholder="0" value="<?= isset($nilaiSiswa[$key]) ? number_format($nilaiSiswa[$key], 0) : 0; ?>" required>
+                            </div>
+                            <?php else: ?>
+                                <div class="input-group">
                                 <label for="<?= $value['nama']; ?>" class="label-input"><?= $value['nama']; ?></label>
                                 <input type="text" name="<?= $value['nama']; ?>" id="<?= $value['nama']; ?>" class="form-input" placeholder="0" value="<?= $nilaiSiswa[$key] ?? 0; ?>" required>
                             </div>
+                            <?php endif; ?>
+
+
+
+
+
                         <?php endforeach; ?>
 
                         <div class="buttons2">

@@ -81,6 +81,8 @@ $no = 1;
   <section class="content">
     <main>
       <div class="header-text">
+    <?php if($_SESSION['level'] == 'admin' || $_SESSION['level'] == 'super admin'): ?>
+
         <label for="kelas">
           <h3>Hasil Sistem Pendukung Keputusan: </h3>
         </label>
@@ -92,6 +94,8 @@ $no = 1;
           <option value="<?= base_url('hasil/hasil-5.php'); ?>">Kelas 5</option>
           <option value="<?= base_url('hasil/hasil-6.php'); ?>">Kelas 6</option>
         </select>
+      <?php endif; ?>
+
       </div>
       <table id="example1" class="styled-table ui celled table">
         <thead>

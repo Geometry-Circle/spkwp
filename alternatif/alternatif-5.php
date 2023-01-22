@@ -24,7 +24,7 @@ $sql_a = mysqli_query($con, $query) or die(mysqli_error($con));
   <section class="content">
     <main>
 
-      <div>
+      <!-- <div>
         <label for="kelas">
           <h4>Lihat data alternatif: </h4>
         </label>
@@ -36,7 +36,7 @@ $sql_a = mysqli_query($con, $query) or die(mysqli_error($con));
           <option value="<?= base_url('alternatif/alternatif-5.php'); ?>" selected>Kelas 5</option>
           <option value="<?= base_url('alternatif/alternatif-6.php'); ?>">Kelas 6</option>
         </select>
-      </div>
+      </div> -->
 
       <div class="flex">
         <h2>Data Alternatif Siswa Kelas <?= $kelas; ?> </h2>

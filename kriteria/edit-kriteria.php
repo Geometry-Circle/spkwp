@@ -4,6 +4,11 @@ include_once('../_config/config.php');
 $id = $_GET['id'];
 $query = mysqli_query($con, "SELECT * FROM kriteria WHERE id = $id");
 $kriteria = mysqli_fetch_assoc($query);
+if($_SESSION['level'] == 'super admin'){
+  $message = 'Anda Tidak memiliki akses edit!!';
+  echo "<script type='text/javascript'>alert('$message');</script>";
+  header("Location: index.php");
+}
 ?>
 
 <html>
