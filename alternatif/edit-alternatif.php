@@ -59,22 +59,65 @@ while ($row = mysqli_fetch_array($kriteria)) {
 
                             <!-- Input Kriteria -->
                             <?php if($value['id'] != 1): ?>
-                            <div class="input-group">
-                                <label for="<?= $value['nama']; ?>" class="label-input"><?= $value['nama']; ?></label>
-                                <input type="text" name="<?= $value['nama']; ?>" id="<?= $value['nama']; ?>" class="form-input" placeholder="0" value="<?= isset($nilaiSiswa[$key]) ? number_format($nilaiSiswa[$key], 0) : 0; ?>" required>
-                            </div>
+                                <!-- <div class="input-group">
+                                    <label for="<?= $value['nama']; ?>" class="label-input"><?= $value['nama']; ?></label>
+                                    <input type="text" name="<?= $value['nama']; ?>" id="<?= $value['nama']; ?>" class="form-input" placeholder="0" value="<?= isset($nilaiSiswa[$key]) ? number_format($nilaiSiswa[$key], 0) : 0; ?>" required>
+                                </div> -->
                             <?php else: ?>
-                                <div class="input-group">
-                                <label for="<?= $value['nama']; ?>" class="label-input"><?= $value['nama']; ?></label>
-                                <input type="text" name="<?= $value['nama']; ?>" id="<?= $value['nama']; ?>" class="form-input" placeholder="0" value="<?= $nilaiSiswa[$key] ?? 0; ?>" required>
-                            </div>
-                            <?php endif; ?>
-
-
-
-
+                                <!-- <div class="input-group">
+                                    <label for="<?= $value['nama']; ?>" class="label-input"><?= $value['nama']; ?></label>
+                                    <input type="text" name="<?= $value['nama']; ?>" id="<?= $value['nama']; ?>" class="form-input" placeholder="0" value="<?= $nilaiSiswa[$key] ?? 0; ?>" required>
+                                </div> -->
+                            <?php endif; ?>                      
 
                         <?php endforeach; ?>
+
+                        <div class="input-group">
+                            <label for="1" class="label-input">Nilai</label>
+                            <input type="text" name="Nilai" id="nilai" class="form-input" placeholder="0" value="<?= $nilaiSiswa[0]; ?>" required>
+                        </div>
+
+                            <!-- Input Kehadiran -->
+                            <div class="input-group">
+                                <label for="kehadiran" class="label-input">Kehadiran</label>
+                                <select name="Kehadiran" id="kehadiran" required>
+                                    <option value="1" <?php if($nilaiSiswa[1] == '1.00') echo"selected"; ?>><= 80%</option>
+                                    <option value="2" <?php if($nilaiSiswa[1] == '2.00') echo "selected"; ?>>> 80% dan <= 88%</option>
+                                    <option value="3" <?php if($nilaiSiswa[1] == '3.00') echo "selected"; ?>>> 88% dan <= 98%</option>
+                                    <option value="4" <?php if($nilaiSiswa[1] == '4.00') echo "selected"; ?>>> 98% dan <= 100%</option>
+                                </select>
+                            </div>
+
+                            <!-- Input Sikap Sosial -->
+                            <div class="input-group">
+                                <label for="sikap-sosial" class="label-input">Sikap Sosial</label>
+                                <select name="Sikap_Sosial" id="sikap-sosial" required>
+                                    <option value="1" <?php if($nilaiSiswa[2] == '1.00') echo"selected"; ?>>>= 1 dan < 2</option>
+                                    <option value="2" <?php if($nilaiSiswa[2] == '2.00') echo "selected"; ?>>>= 2 dan < 3</option>
+                                    <option value="3" <?php if($nilaiSiswa[2] == '3.00') echo "selected"; ?>>>= 3 dan <= 4</option>
+                                </select>
+                            </div> 
+
+                            <!-- Input Sertifikat Lomba -->
+                            <div class="input-group">
+                                <label for="sertif-lomba" class="label-input">Sertifikat Lomba</label>
+                                <select name="Sertifikat_Lomba" id="sertif-lomba" required>
+                                    <option value="1" <?php if($nilaiSiswa[3] == '1.00') echo"selected"; ?>>Tidak memiliki sertifikat</option>
+                                    <option value="2" <?php if($nilaiSiswa[3] == '2.00') echo "selected"; ?>>Memiliki sertifikat tingkat regional</option>
+                                    <option value="3" <?php if($nilaiSiswa[3] == '3.00') echo "selected"; ?>>Memiliki sertifikat tingkat kabupaten</option>
+                                    <option value="4" <?php if($nilaiSiswa[3] == '4.00') echo "selected"; ?>>Memiliki sertifikat nasional</option>
+                                </select>
+                            </div>
+
+                            <!-- Input Sikap Spiritual -->
+                            <div class="input-group">
+                                <label for="sikap-spiritual" class="label-input">Sikap Spiritual</label>
+                                <select name="Sikap_Spiritual" id="sikap-spiritual" required>
+                                    <option value="1" <?php if($nilaiSiswa[4] == '1.00') echo"selected"; ?>>>= 1 dan < 2</option>
+                                    <option value="2" <?php if($nilaiSiswa[4] == '2.00') echo "selected"; ?>>>= 2 dan < 3</option>
+                                    <option value="3" <?php if($nilaiSiswa[4] == '3.00') echo "selected"; ?>>>= 3 dan <= 4</option>
+                                </select>
+                            </div> 
 
                         <div class="buttons2">
 
@@ -87,7 +130,7 @@ while ($row = mysqli_fetch_array($kriteria)) {
                             </button>
 
                             <!-- Button Kembali -->
-                            <a href="alternatif-1.php" class="btn-a btn-kembali">
+                            <a href="alternatif-<?= $kelas; ?>.php" class="btn-a btn-kembali">
                                 <span class="btn-text">
                                     Kembali
                                 </span>

@@ -75,17 +75,16 @@ $sql_a = mysqli_query($con, $query) or die(mysqli_error($con));
                   <tr>
                     <td><?= $no++ ?></td>
                     <td><?= $value[1]; ?></td>
-                    <td><?= explode(',', $value[2])[0]; ?></td>
                     <!-- Nilai -->
-                    <td><?= explode(',', $value[2])[0]; ?></td>
-                    <!-- Kehadiran -->
-                    <td><?= number_format(explode(',', $value[2])[1], 0); ?></td>
-                    <!-- Nilai Spiritual -->
-                    <td><?= number_format(explode(',', $value[2])[4] ?? '0', 0); ?></td>
-                    <!-- Nilai Sosial -->
-                    <td><?= number_format(explode(',', $value[2])[2], 0); ?></td>
-                    <!-- Sertifikat Lomba -->
-                    <td><?= number_format(explode(',', $value[2])[3], 0); ?></td>
+                  <td><?= explode(',', $value[2])[0]; ?></td>
+                  <!-- Kehadiran -->
+                  <td><?= number_format(explode(',', $value[2])[1], 0); ?></td>
+                  <!-- Nilai Spiritual -->
+                  <td><?= number_format(explode(',', $value[2])[4] ?? '0', 0); ?></td>
+                  <!-- Nilai Sosial -->
+                  <td><?= number_format(explode(',', $value[2])[2], 0); ?></td>
+                  <!-- Sertifikat Lomba -->
+                  <td><?= number_format(explode(',', $value[2])[3], 0); ?></td>
                     <td class="aksi">
                       <div class="buttons">
                         <!-- Button Edit -->
