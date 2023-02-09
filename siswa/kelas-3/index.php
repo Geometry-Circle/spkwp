@@ -22,21 +22,21 @@ $sql_a = mysqli_query($con, $query) or die(mysqli_error($con));
 <body>
     <section class="content">
         <main>
-        <!-- Jika usernya admin maka menu ini akan dibuka -->
-        <?php if($_SESSION['level'] == 'admin'): ?>
-            <div>
-                <label for="kelas">
-                    <h4>Lihat data siswa kelas : </h4>
-                </label>
-                <select name="kelas" id="kelas" onchange="location = this.value;">
-                    <option value="<?= base_url('siswa/kelas-1/index.php'); ?>">Kelas 1</option>
-                    <option value="<?= base_url('siswa/kelas-2/index.php'); ?>">Kelas 2</option>
-                    <option value="<?= base_url('siswa/kelas-3/index.php'); ?>" selected>Kelas 3</option>
-                    <option value="<?= base_url('siswa/kelas-4/index.php'); ?>">Kelas 4</option>
-                    <option value="<?= base_url('siswa/kelas-5/index.php'); ?>">Kelas 5</option>
-                    <option value="<?= base_url('siswa/kelas-6/index.php'); ?>">Kelas 6</option>
-                </select>
-            </div>
+            <!-- Jika usernya admin maka menu ini akan dibuka -->
+            <?php if ($_SESSION['level'] == 'admin') : ?>
+                <div>
+                    <label for="kelas">
+                        <h4>Lihat data siswa kelas : </h4>
+                    </label>
+                    <select name="kelas" id="kelas" onchange="location = this.value;">
+                        <option value="<?= base_url('siswa/kelas-1/index.php'); ?>">Kelas 1</option>
+                        <option value="<?= base_url('siswa/kelas-2/index.php'); ?>">Kelas 2</option>
+                        <option value="<?= base_url('siswa/kelas-3/index.php'); ?>" selected>Kelas 3</option>
+                        <option value="<?= base_url('siswa/kelas-4/index.php'); ?>">Kelas 4</option>
+                        <option value="<?= base_url('siswa/kelas-5/index.php'); ?>">Kelas 5</option>
+                        <option value="<?= base_url('siswa/kelas-6/index.php'); ?>">Kelas 6</option>
+                    </select>
+                </div>
             <?php endif; ?>
             <div class="flex">
                 <h2>Data Siswa Kelas 3</h2>
@@ -46,6 +46,13 @@ $sql_a = mysqli_query($con, $query) or die(mysqli_error($con));
                     <i class='bx bxs-user-plus bx-sm'></i>
                     <span class="btn-text">
                         Tambah
+                    </span>
+                </a>
+
+                <!-- Button Tambah Excel -->
+                <a href="../tambah-excel.php?req=3" class="btn2 btn-tambah-excel">
+                    <span class="btn-text">
+                        Tambah Excel
                     </span>
                 </a>
             </div>

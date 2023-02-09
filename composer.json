@@ -1,0 +1,8 @@
+{
+    "name": "surya/wp",
+    "description": "project",
+    "type": "project",
+    "require": {
+        "phpoffice/phpspreadsheet": "^1.27"
+    }
+}

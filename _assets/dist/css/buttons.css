@@ -43,6 +43,12 @@
     background-color: #0d6efd;
 }
 
+.btn-tambah-excel {
+    width: 8%;
+    padding: 6px 10px;
+    background-color: #03a52f;
+}
+
 .btn-tambah:hover {
     color: white;
     background-color: #075bda;
@@ -72,6 +78,12 @@
 
 .btn-hapus {
     margin-left: 15px;
+    padding: 6px 10px;
+    background-color: #dc3545;
+}
+
+.btn-hapus-semua {
+    width: 8%;
     padding: 6px 10px;
     background-color: #dc3545;
 }

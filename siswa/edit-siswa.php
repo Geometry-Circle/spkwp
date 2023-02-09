@@ -3,7 +3,7 @@ include_once('../_header.php');
 include_once('../_config/config.php');
 
 $id = $_GET['id'];
-$req = $_GET['req'];
+$kelas = $_GET['req'];
 $query = mysqli_query($con, "SELECT * FROM siswa WHERE id = $id");
 $siswa = mysqli_fetch_assoc($query);
 ?>
@@ -29,7 +29,7 @@ $siswa = mysqli_fetch_assoc($query);
         <main>
 
             <form action="update.php" method="POST" class="form-horizontal">
-                <input type="hidden" name="req" value="<?= $req; ?>">
+                <input type="hidden" name="req" value="<?= $kelas; ?>">
                 <div class="container">
                     <div class="card">
                         <h2>Edit Data Siswa</h2>
@@ -85,7 +85,7 @@ $siswa = mysqli_fetch_assoc($query);
                             </button>
 
                             <!-- Button Kembali -->
-                            <a href="<?= base_url("siswa/kelas-1/index.php"); ?>" class="btn-a btn-kembali">
+                            <a href="<?= base_url("siswa/kelas-$kelas/index.php"); ?>" class="btn-a btn-kembali">
                                 <span class="btn-text">
                                     Kembali
                                 </span>

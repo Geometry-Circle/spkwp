@@ -16,14 +16,23 @@ $sql_a = mysqli_query($con, $query) or die(mysqli_error($con));
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fomantic-ui/2.8.8/semantic.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/dataTables.semanticui.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css" />
+    <!-- Default theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css" />
+    <!-- Semantic UI theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css" />
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css" />
     <title>Alternatif | Siswa Kelas 1</title>
 </head>
 
 <body>
     <section class="content">
         <main>
-        <!-- Jika usernya admin maka menu ini akan dibuka -->
-            <?php if($_SESSION['level'] == 'admin'): ?>
+            <!-- Jika usernya admin maka menu ini akan dibuka -->
+            <?php if ($_SESSION['level'] == 'admin') : ?>
                 <div>
                     <label for="kelas">
                         <h4>Lihat data siswa kelas : </h4>
@@ -48,6 +57,20 @@ $sql_a = mysqli_query($con, $query) or die(mysqli_error($con));
                         Tambah
                     </span>
                 </a>
+
+                <!-- Button Tambah Excel -->
+                <a href="../tambah-excel.php?req=1" class="btn2 btn-tambah-excel">
+                    <span class="btn-text">
+                        Tambah Excel
+                    </span>
+                </a>
+
+                <!-- Button Hapus Semua -->
+                <!-- <button class="btn2 btn-hapus-semua" id="btn-hapus-semua">
+                    <span class="btn-text">
+                        Hapus Semua
+                    </span>
+                </button> -->
             </div>
 
             <!-- /.box-header -->
@@ -109,4 +132,8 @@ $sql_a = mysqli_query($con, $query) or die(mysqli_error($con));
         </main>
     </section>
     <?php include_once('../../_footer.php'); ?>
+
+    <!-- JavaScript -->
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <script src="../../_assets/dist/js/notif.js"></script>
 </body>
