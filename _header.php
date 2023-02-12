@@ -67,69 +67,91 @@ if (!isset($_SESSION['user'])) {
           </a>
         </div>
 
-        <?php if($_SESSION['level'] == 'wali'): ?>
-        <!-- Menu Siswa -->
-        <div class="nav__item">
-          <a href="<?= base_url('siswa/'.$_SESSION['kelas'].'/index.php'); ?>" class="nav__link">
-            <i class='bx bxs-user-rectangle bx-sm nav__icon'></i>
-            <span class="nav__name">Siswa</span>
-          </a>
-        </div>
+        <?php if ($_SESSION['level'] == 'wali') : ?>
+          <!-- Menu Siswa -->
+          <div class="nav__item">
+            <a href="<?= base_url('siswa/' . $_SESSION['kelas'] . '/index.php'); ?>" class="nav__link">
+              <i class='bx bxs-user-rectangle bx-sm nav__icon'></i>
+              <span class="nav__name">Siswa</span>
+            </a>
+          </div>
         <?php endif; ?>
-        <?php if($_SESSION['level'] == 'admin'): ?>
-        <!-- Menu Siswa -->
-        <div class="nav__item">
-          <a href="<?= base_url('siswa/kelas-1/index.php'); ?>" class="nav__link">
-            <i class='bx bxs-user-rectangle bx-sm nav__icon'></i>
-            <span class="nav__name">Siswa</span>
-          </a>
-        </div>
+        <?php if ($_SESSION['level'] == 'admin') : ?>
+          <!-- Menu Siswa -->
+          <div class="nav__item">
+            <a href="<?= base_url('siswa/kelas-1/index.php'); ?>" class="nav__link">
+              <i class='bx bxs-user-rectangle bx-sm nav__icon'></i>
+              <span class="nav__name">Siswa</span>
+            </a>
+          </div>
         <?php endif; ?>
 
-        <?php if($_SESSION['level'] == 'super admin' || $_SESSION['level'] == 'admin'): ?>
-        <!-- Menu Kriteria -->
-        <div class="nav__item">
-          <a href="<?= base_url('kriteria/index.php'); ?>" class="nav__link">
-            <i class='bx bx-list-check bx-sm nav__icon'></i>
-            <span class="nav__name">Kriteria</span>
-          </a>
-        </div>
+        <?php if ($_SESSION['level'] == 'super admin' || $_SESSION['level'] == 'admin') : ?>
+          <!-- Menu Kriteria -->
+          <div class="nav__item">
+            <a href="<?= base_url('kriteria/index.php'); ?>" class="nav__link">
+              <i class='bx bx-list-check bx-sm nav__icon'></i>
+              <span class="nav__name">Kriteria</span>
+            </a>
+          </div>
         <?php endif; ?>
 
         <!-- Menu Alternatif -->
-        <?php if($_SESSION['level'] == 'wali'): ?>
-        <div class="nav__item">
-          <?php if($_SESSION['kelas'] == 'kelas-1'): ?>
-            <a href="<?= base_url('alternatif/alternatif-1.php'); ?>" class="nav__link">
+        <?php if ($_SESSION['level'] == 'wali') : ?>
+          <div class="nav__item">
+            <?php if ($_SESSION['kelas'] == 'kelas-1') : ?>
+              <a href="<?= base_url('alternatif/alternatif-1.php'); ?>" class="nav__link">
 
-          <?php elseif($_SESSION['kelas'] == 'kelas-2'): ?>
-            <a href="<?= base_url('alternatif/alternatif-2.php'); ?>" class="nav__link">
+              <?php elseif ($_SESSION['kelas'] == 'kelas-2') : ?>
+                <a href="<?= base_url('alternatif/alternatif-2.php'); ?>" class="nav__link">
 
-          <?php elseif($_SESSION['kelas'] == 'kelas-3'): ?>
-            <a href="<?= base_url('alternatif/alternatif-3.php'); ?>" class="nav__link">
+                <?php elseif ($_SESSION['kelas'] == 'kelas-3') : ?>
+                  <a href="<?= base_url('alternatif/alternatif-3.php'); ?>" class="nav__link">
 
-            <?php elseif($_SESSION['kelas'] == 'kelas-4'): ?>
-            <a href="<?= base_url('alternatif/alternatif-4.php'); ?>" class="nav__link">
+                  <?php elseif ($_SESSION['kelas'] == 'kelas-4') : ?>
+                    <a href="<?= base_url('alternatif/alternatif-4.php'); ?>" class="nav__link">
 
-            <?php elseif($_SESSION['kelas'] == 'kelas-5'): ?>
-            <a href="<?= base_url('alternatif/alternatif-5.php'); ?>" class="nav__link">
+                    <?php elseif ($_SESSION['kelas'] == 'kelas-5') : ?>
+                      <a href="<?= base_url('alternatif/alternatif-5.php'); ?>" class="nav__link">
 
-            <?php elseif($_SESSION['kelas'] == 'kelas-6'): ?>
-            <a href="<?= base_url('alternatif/alternatif-6.php'); ?>" class="nav__link">
-            <?php endif; ?>
+                      <?php elseif ($_SESSION['kelas'] == 'kelas-6') : ?>
+                        <a href="<?= base_url('alternatif/alternatif-6.php'); ?>" class="nav__link">
+                        <?php endif; ?>
 
-            <i class='bx bxs-user-check bx-sm nav__icon'></i>
-            <span class="nav__name">Alternatif</span>
-          </a>
-        </div>
+                        <i class='bx bxs-user-check bx-sm nav__icon'></i>
+                        <span class="nav__name">Alternatif</span>
+                        </a>
+          </div>
         <?php endif; ?>
 
 
         <!-- Menu Hasil -->
-        <a href="<?= base_url('hasil/hasil-1.php'); ?>" class="nav__link">
-          <i class='bx bxs-bar-chart-alt-2 bx-sm nav__icon'></i>
-          <span class="nav__name">Hasil</span>
-        </a>
+        <?php if ($_SESSION['level'] == 'wali') : ?>
+          <div class="nav__item">
+            <?php if ($_SESSION['kelas'] == 'kelas-1') : ?>
+              <a href="<?= base_url('hasil/hasil-1.php'); ?>" class="nav__link">
+
+              <?php elseif ($_SESSION['kelas'] == 'kelas-2') : ?>
+                <a href="<?= base_url('hasil/hasil-2.php'); ?>" class="nav__link">
+
+                <?php elseif ($_SESSION['kelas'] == 'kelas-3') : ?>
+                  <a href="<?= base_url('hasil/hasil-3.php'); ?>" class="nav__link">
+
+                  <?php elseif ($_SESSION['kelas'] == 'kelas-4') : ?>
+                    <a href="<?= base_url('hasil/hasil-4.php'); ?>" class="nav__link">
+
+                    <?php elseif ($_SESSION['kelas'] == 'kelas-5') : ?>
+                      <a href="<?= base_url('hasil/hasil-5.php'); ?>" class="nav__link">
+
+                      <?php elseif ($_SESSION['kelas'] == 'kelas-6') : ?>
+                        <a href="<?= base_url('hasil/hasil-6.php'); ?>" class="nav__link">
+                        <?php endif; ?>
+
+                        <i class='bx bxs-bar-chart-alt-2 bx-sm nav__icon'></i>
+                        <span class="nav__name">Hasil</span>
+                        </a>
+          </div>
+        <?php endif; ?>
 
         <a href="<?= base_url('auth/logout.php'); ?>" class="nav__link nav__logout">
           <i class='bx bx-log-out nav__icon'></i>

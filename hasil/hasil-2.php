@@ -81,18 +81,21 @@ $no = 1;
   <section class="content">
     <main>
       <div class="header-text">
-        <label for="kelas">
-          <h3>Hasil Sistem Pendukung Keputusan: </h3>
-        </label>
-        <select name="kelas" id="kelas" onchange="location = this.value;">
-          <option value="<?= base_url('hasil/hasil-1.php'); ?>">Kelas 1</option>
-          <option value="<?= base_url('hasil/hasil-2.php'); ?>" selected>Kelas 2</option>
-          <option value="<?= base_url('hasil/hasil-3.php'); ?>">Kelas 3</option>
-          <option value="<?= base_url('hasil/hasil-4.php'); ?>">Kelas 4</option>
-          <option value="<?= base_url('hasil/hasil-5.php'); ?>">Kelas 5</option>
-          <option value="<?= base_url('hasil/hasil-6.php'); ?>">Kelas 6</option>
-        </select>
+        <?php if ($_SESSION['level'] == 'admin' || $_SESSION['level'] == 'super admin') : ?>
+          <label for="kelas">
+            <h3>Hasil Sistem Pendukung Keputusan: </h3>
+          </label>
+          <select name="kelas" id="kelas" onchange="location = this.value;">
+            <option value="<?= base_url('hasil/hasil-1.php'); ?>">Kelas 1</option>
+            <option value="<?= base_url('hasil/hasil-2.php'); ?>" selected>Kelas 2</option>
+            <option value="<?= base_url('hasil/hasil-3.php'); ?>">Kelas 3</option>
+            <option value="<?= base_url('hasil/hasil-4.php'); ?>">Kelas 4</option>
+            <option value="<?= base_url('hasil/hasil-5.php'); ?>">Kelas 5</option>
+            <option value="<?= base_url('hasil/hasil-6.php'); ?>">Kelas 6</option>
+          </select>
+        <?php endif; ?>
       </div>
+
       <table id="example1" class="styled-table ui celled table">
         <thead>
           <tr>
