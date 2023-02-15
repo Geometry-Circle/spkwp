@@ -63,29 +63,36 @@ while ($row = mysqli_fetch_array($siswa)) {
               </select>
             </div>
 
-            <?php //foreach ($dataKriteria as $key => $value) : ?>
-              <!-- Input Kriteria -->
-              <!-- <div class="input-group">
+            <?php //foreach ($dataKriteria as $key => $value) : 
+            ?>
+            <!-- Input Kriteria -->
+            <!-- <div class="input-group">
                 <label for="<?= $value['nama']; ?>" class="label-input"><?= $value['nama']; ?></label>
                 <input type="text" name="<?= $value['id']; ?>" id="<?= $value['nama']; ?>" class="form-input" placeholder="0" required>
               </div> -->
-            <?php //endforeach; ?>
+            <?php //endforeach; 
+            ?>
 
             <!-- Input Nilai -->
             <div class="input-group">
-                <label for="Nilai" class="label-input">Nilai</label>
-                <input type="text" name="1" id="Nilai" class="form-input" placeholder="0.0" required>
+              <label for="Nilai" class="label-input">Nilai</label>
+              <input type="text" name="1" id="Nilai" class="form-input" placeholder="0.0" required>
             </div>
 
             <!-- Input Kehadiran -->
             <div class="input-group">
               <label for="kehadiran" class="label-input">Kehadiran</label>
               <select name="2" id="kehadiran" required>
-              <option selected="true" disabled="disabled">Pilih</option>
-                <option value="1"><= 80%</option>
+                <option selected="true" disabled="disabled">Pilih</option>
+                <!-- <option value="1"><= 80%</option>
                 <option value="2">> 80% dan <= 88%</option>
                 <option value="3">> 88% dan <= 98%</option>
-                <option value="4">> 98% dan <= 100%</option>
+                <option value="4">> 98% dan <= 100%</option> -->
+
+                <option value="1">Kurang</option>
+                <option value="2">Cukup </option>
+                <option value="3">Rajin</option>
+                <option value="4">Sangat Rajin</option>
               </select>
             </div>
 
@@ -93,10 +100,13 @@ while ($row = mysqli_fetch_array($siswa)) {
             <div class="input-group">
               <label for="sosial" class="label-input">Sikap Sosial</label>
               <select name="3" id="sosial" required>
-              <option selected="true" disabled="disabled">Pilih</option>
-                <option value="1">>= 1 dan < 2</option>
-                <option value="2">>= 2 dan < 3</option>
-                <option value="3">>= 3 dan <= 4</option>
+                <option selected="true" disabled="disabled">Pilih</option>
+                <!-- <option value="1">>= 1 dan < 2</option>
+                <option value="2">>= 2 dan 3<</option>
+                <option value="3">>=3 dan <=4</option> -->
+                <option value="1">Kurang</option>
+                <option value="2">Cukup</option>
+                <option value="3">Baik</option>
               </select>
             </div>
 
@@ -104,7 +114,7 @@ while ($row = mysqli_fetch_array($siswa)) {
             <div class="input-group">
               <label for="sertifikat-lomba" class="label-input">Sertifikat-Lomba</label>
               <select name="4" id="sertifikat-lomba" required>
-              <option selected="true" disabled="disabled">Pilih</option>
+                <option selected="true" disabled="disabled">Pilih</option>
                 <option value="1">Tidak memiliki sertifikat</option>
                 <option value="2">Memiliki sertifikat tingkat regional</option>
                 <option value="3">Memiliki sertifikat tingkat kabupaten</option>
@@ -116,10 +126,13 @@ while ($row = mysqli_fetch_array($siswa)) {
             <div class="input-group">
               <label for="spiritual" class="label-input">Sikap Spiritual</label>
               <select name="5" id="spiritual" required>
-              <option selected="true" disabled="disabled">Pilih</option>
-                <option value="1">>= 1 dan < 2</option>
-                <option value="2">>= 2 dan < 3</option>
-                <option value="3">>= 3 dan <= 4</option>
+                <option selected="true" disabled="disabled">Pilih</option>
+                <!-- <option value="1">>= 1 dan < 2</option>
+                <option value="2">>= 2 dan 3<</option>
+                <option value="3">>=3 dan <=4</option> -->
+                <option value="1">Kurang</option>
+                <option value="2">Cukup</option>
+                <option value="3">Baik</option>
               </select>
             </div>
 

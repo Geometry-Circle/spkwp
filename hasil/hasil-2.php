@@ -101,6 +101,7 @@ $no = 1;
           <tr>
             <td>No</td>
             <td>Nama Siswa</td>
+            <td>Nilai S</td>
             <td>Nilai V</td>
             <td>Ranking <i class='bx bxs-bar-chart-alt-2'></i></td>
           </tr>
@@ -110,6 +111,7 @@ $no = 1;
             <tr>
               <td><?= $no; ?></td>
               <td><?= $value['siswa']; ?></td>
+              <td><?= number_format($value['nilaiS'], 6); ?></td>
               <td><?= number_format($value['nilaiV'], 6); ?></td>
               <td>#<?= $no; ?></td>
             </tr>
