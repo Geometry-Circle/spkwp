@@ -5,3 +5,18 @@ div>label>h3 {
 .header-text {
     margin: 6rem 0 0 0;
 }
+
+.kesimpulan {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #cff4fc;
+}
+
+.kesimpulan h4:first-child{
+    color: #087990;
+}
+
+.kesimpulan p {
+    margin-bottom: 5px;
+}

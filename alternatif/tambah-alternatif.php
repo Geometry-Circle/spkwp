@@ -84,15 +84,16 @@ while ($row = mysqli_fetch_array($siswa)) {
               <label for="kehadiran" class="label-input">Kehadiran</label>
               <select name="2" id="kehadiran" required>
                 <option selected="true" disabled="disabled">Pilih</option>
-                <!-- <option value="1"><= 80%</option>
+                <option value="1">
+                  <= 80%</option>
                 <option value="2">> 80% dan <= 88%</option>
                 <option value="3">> 88% dan <= 98%</option>
-                <option value="4">> 98% dan <= 100%</option> -->
+                <option value="4">> 98% dan <= 100%</option>
 
-                <option value="1">Kurang</option>
+                    <!-- <option value="1">Kurang</option>
                 <option value="2">Cukup </option>
                 <option value="3">Rajin</option>
-                <option value="4">Sangat Rajin</option>
+                <option value="4">Sangat Rajin</option> -->
               </select>
             </div>
 
@@ -101,12 +102,12 @@ while ($row = mysqli_fetch_array($siswa)) {
               <label for="sosial" class="label-input">Sikap Sosial</label>
               <select name="3" id="sosial" required>
                 <option selected="true" disabled="disabled">Pilih</option>
-                <!-- <option value="1">>= 1 dan < 2</option>
-                <option value="2">>= 2 dan 3<</option>
-                <option value="3">>=3 dan <=4</option> -->
-                <option value="1">Kurang</option>
+                <option value="1">>= 1 dan < 2 </option>
+                <option value="2">>= 2 dan < 3 </option>
+                <option value="3">>=3 dan <=4 </option>
+                    <!-- <option value="1">Kurang</option>
                 <option value="2">Cukup</option>
-                <option value="3">Baik</option>
+                <option value="3">Baik</option> -->
               </select>
             </div>
 
@@ -127,12 +128,12 @@ while ($row = mysqli_fetch_array($siswa)) {
               <label for="spiritual" class="label-input">Sikap Spiritual</label>
               <select name="5" id="spiritual" required>
                 <option selected="true" disabled="disabled">Pilih</option>
-                <!-- <option value="1">>= 1 dan < 2</option>
-                <option value="2">>= 2 dan 3<</option>
-                <option value="3">>=3 dan <=4</option> -->
-                <option value="1">Kurang</option>
+                <option value="1">>= 1 dan < 2 </option>
+                <option value="2">>= 2 dan < 3 </option>
+                <option value="3">>=3 dan <=4 </option>
+                    <!-- <option value="1">Kurang</option>
                 <option value="2">Cukup</option>
-                <option value="3">Baik</option>
+                <option value="3">Baik</option> -->
               </select>
             </div>
 

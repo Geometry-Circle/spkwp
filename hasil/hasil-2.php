@@ -21,7 +21,6 @@ foreach ($kriteria as $key => $value) {
 }
 
 // Mencari nilai S
-
 $siswa = [];
 foreach ($alternatif as $key => $value) {
   $siswa[$key] = [
@@ -119,6 +118,15 @@ $no = 1;
           endforeach; ?>
         </tbody>
       </table>
+      <div class="kesimpulan">
+        <h4>Kesimpulan</h4>
+        <p>Berikut ini merupakan 5 siswa berprestasi berdasarkan perhitungan Weight Product:</p>
+        <p>1. <?= $nilaiS[0]['siswa']; ?></p>
+        <p>2. <?= $nilaiS[1]['siswa']; ?></p>
+        <p>3. <?= $nilaiS[2]['siswa']; ?></p>
+        <p>4. <?= $nilaiS[3]['siswa']; ?></p>
+        <p>5. <?= $nilaiS[4]['siswa']; ?></p>
+      </div>
     </main>
   </section>
   <?php include_once('../_footer.php'); ?>

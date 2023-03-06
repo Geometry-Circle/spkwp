@@ -21,12 +21,11 @@ foreach ($kriteria as $key => $value) {
 }
 
 // Mencari nilai S
-
 $siswa = [];
 foreach ($alternatif as $key => $value) {
   $siswa[$key] = [
     'nama' => $value[0],
-    'nilai' => explode(',', $value[1])
+    'nilai' => explode(',', $value[1]) // mengambil nilai sesudah koma
   ];
 }
 
@@ -36,13 +35,15 @@ $totalS = 0; // menampung total nilai S
 foreach ($siswa as $key => $value) {
   $siswaS = 1;
   foreach ($value['nilai'] as $k => $v) {
-    $siswaS *= pow($v, $w[$k]);
+    $siswaS *= pow($v, $w[$k]); // Normalisasi nilai S
   }
+  // menampung nilai S dan nama siswa
   $nilaiS[$key] = [
     'siswa' => $value['nama'],
     'nilaiS' => $siswaS
   ];
 
+  // menjumlahkan total nilai S
   $totalS += $siswaS;
 }
 
@@ -51,10 +52,12 @@ foreach ($nilaiS as $key => $value) {
   $nilaiS[$key]['nilaiV'] = $value['nilaiS'] / $totalS;
 }
 
+// mengurutkan nilai array ke terbesar
 array_multisort(array_map(function ($element) {
   return $element['nilaiV'];
 }, $nilaiS), SORT_DESC, $nilaiS);
 
+// nomor urut
 $no = 1;
 
 ?>
@@ -108,16 +111,30 @@ $no = 1;
         <tbody>
           <?php foreach ($nilaiS as $key => $value) : ?>
             <tr>
+              <!-- menampilkan nomor urut -->
               <td><?= $no; ?></td>
+              <!-- menampilkan nama siswa -->
               <td><?= $value['siswa']; ?></td>
+              <!-- menampilkan nilai S -->
               <td><?= number_format($value['nilaiS'], 6); ?></td>
+              <!-- menampilkan nilai V -->
               <td><?= number_format($value['nilaiV'], 6); ?></td>
+              <!-- menampilkan rangking -->
               <td>#<?= $no; ?></td>
             </tr>
           <?php $no++;
           endforeach; ?>
         </tbody>
       </table>
+      <div class="kesimpulan">
+        <h4>Kesimpulan</h4>
+        <p>Berikut ini merupakan 5 siswa berprestasi berdasarkan perhitungan Weight Product:</p>
+        <p>1. <?= $nilaiS[0]['siswa']; ?></p>
+        <p>2. <?= $nilaiS[1]['siswa']; ?></p>
+        <p>3. <?= $nilaiS[2]['siswa']; ?></p>
+        <p>4. <?= $nilaiS[3]['siswa']; ?></p>
+        <p>5. <?= $nilaiS[4]['siswa']; ?></p>
+      </div>
     </main>
   </section>
   <?php include_once('../_footer.php'); ?>

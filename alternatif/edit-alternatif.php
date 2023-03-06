@@ -86,6 +86,11 @@ while ($row = mysqli_fetch_array($kriteria)) {
                                 <option value="2" <?php if ($nilaiSiswa[1] == '2.00') echo "selected"; ?>>> 80% dan <= 88%</option>
                                 <option value="3" <?php if ($nilaiSiswa[1] == '3.00') echo "selected"; ?>>> 88% dan <= 98%</option>
                                 <option value="4" <?php if ($nilaiSiswa[1] == '4.00') echo "selected"; ?>>> 98% dan <= 100%</option>
+
+                                        <!-- <option value="1" <?php if ($nilaiSiswa[1] == '1.00') echo "selected"; ?>>Kurang</option>
+                                <option value="2" <?php if ($nilaiSiswa[1] == '2.00') echo "selected"; ?>>Cukup</option>
+                                <option value="3" <?php if ($nilaiSiswa[1] == '3.00') echo "selected"; ?>>Rajin</option>
+                                <option value="4" <?php if ($nilaiSiswa[1] == '4.00') echo "selected"; ?>>Sangat Rajin</option> -->
                             </select>
                         </div>
 
@@ -93,10 +98,14 @@ while ($row = mysqli_fetch_array($kriteria)) {
                         <div class="input-group">
                             <label for="sikap-sosial" class="label-input">Sikap Sosial</label>
                             <select name="Sikap_Sosial" id="sikap-sosial" required>
-                                <option value="1" <?php if (isset($nilaiSiswa)) echo "selected"; ?>>Masukkan Nilai Sosial</option>
+                                <option value="1" <?php if (isset($nilaiSiswa)) echo "selected"; ?> disabled>Masukkan Nilai Sosial</option>
                                 <option value="1" <?php if ($nilaiSiswa[2] == '1.00') echo "selected"; ?>>>= 1 dan < 2</option>
                                 <option value="2" <?php if ($nilaiSiswa[2] == '2.00') echo "selected"; ?>>>= 2 dan < 3</option>
                                 <option value="3" <?php if ($nilaiSiswa[2] == '3.00') echo "selected"; ?>>>= 3 dan <= 4</option>
+
+                                        <!-- <option value="1" <?php if ($nilaiSiswa[2] == '1.00') echo "selected"; ?>>Kurang</option>
+                                <option value="2" <?php if ($nilaiSiswa[2] == '2.00') echo "selected"; ?>>Cukup</option>
+                                <option value="3" <?php if ($nilaiSiswa[2] == '3.00') echo "selected"; ?>>Baik</option> -->
                             </select>
                         </div>
 
@@ -115,10 +124,14 @@ while ($row = mysqli_fetch_array($kriteria)) {
                         <div class="input-group">
                             <label for="sikap-spiritual" class="label-input">Sikap Spiritual</label>
                             <select name="Sikap_Spiritual" id="sikap-spiritual" required>
-                                <option value="1" <?php if (isset($nilaiSiswa)) echo "selected"; ?>>Masukkan Nilai Sosial</option>
+                                <option value="1" <?php if (isset($nilaiSiswa)) echo "selected"; ?> disabled>Masukkan Nilai Sosial</option>
                                 <option value="1" <?php if ($nilaiSiswa[4] == '1.00') echo "selected"; ?>>>= 1 dan < 2</option>
                                 <option value="2" <?php if ($nilaiSiswa[4] == '2.00') echo "selected"; ?>>>= 2 dan < 3</option>
                                 <option value="3" <?php if ($nilaiSiswa[4] == '3.00') echo "selected"; ?>>>= 3 dan <= 4</option>
+
+                                        <!-- <option value="1" <?php if ($nilaiSiswa[4] == '1.00') echo "selected"; ?>>Kurang</option>
+                                <option value="2" <?php if ($nilaiSiswa[4] == '2.00') echo "selected"; ?>>Cukup</option>
+                                <option value="3" <?php if ($nilaiSiswa[4] == '3.00') echo "selected"; ?>>Baik</option> -->
                             </select>
                         </div>
 
